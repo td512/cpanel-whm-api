@@ -30,7 +30,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Update Composer
-      run: composer self-update
+      run: sudo composer self-update
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
@@ -70,7 +70,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Update Composer
-      run: composer self-update
+      run: sudo composer self-update
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
@@ -110,7 +110,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Update Composer
-      run: composer self-update
+      run: sudo composer self-update
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
@@ -150,7 +150,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Update Composer
-      run: composer self-update
+      run: sudo composer self-update
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
@@ -190,7 +190,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Update Composer
-      run: composer self-update
+      run: sudo composer self-update
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
@@ -230,7 +230,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Update Composer
-      run: composer self-update
+      run: sudo composer self-update
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
