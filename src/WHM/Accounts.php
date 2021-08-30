@@ -59,8 +59,8 @@ class Accounts
      *
      * @link https://documentation.cpanel.net/display/DD/WHM+API+1+Functions+-+listaccts
      *
-     * @param null $keyword
-     * @param null $searchType
+     * @param string (optional) $keyword
+     * @param string (optional) $searchType
      * @param array $options
      *
      * @return array
@@ -132,8 +132,8 @@ class Accounts
      *
      * @link https://documentation.cpanel.net/display/DD/WHM+API+1+Functions+-+accountsummary
      *
-     * @param null $user
-     * @param null $domain
+     * @param string (optional) $user
+     * @param string (optional) $domain
      *
      * @return null|Account
      * @throws ClientExceptions
@@ -848,7 +848,7 @@ class Accounts
      *
      * @param $user
      * @param $newPassword
-     * @param null $digestAuth
+     * @param string (optional) $digestAuth
      * @param bool $dbPassUpdate
      *
      * @return null|array
@@ -916,11 +916,11 @@ class Accounts
      * WHM API function: Accounts -> showbw
      * @link https://documentation.cpanel.net/display/DD/WHM+API+1+Functions+-+showbw
      *
-     * @param null $month
-     * @param null $year
-     * @param null $resellerUsername
-     * @param null $searchKeyword
-     * @param null $searchType
+     * @param integer (optional) $month
+     * @param integer (optional) $year
+     * @param string (optional) $resellerUsername
+     * @param string (optional) $searchKeyword
+     * @param string (optional) $searchType
      *
      * @return array
      * @throws ClientExceptions
