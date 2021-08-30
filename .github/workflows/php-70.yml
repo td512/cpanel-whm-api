@@ -1,4 +1,4 @@
-name: PHP 7.0
+name: PHP Test
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  PHP-7.0:
 
     runs-on: ubuntu-latest
 
@@ -19,6 +19,221 @@ jobs:
       uses: nanasess/setup-php@v3.0.6
       with:
         php-version: 7.0
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Update Composer
+      run: composer self-update
+      
+    - name: Install Composer packages
+      run: composer install --no-interaction --prefer-source --dev
+      
+    - name: Rehash PHPENV
+      run: phpenv rehash
+    
+    - name: Run PHPUnit
+      run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
+      
+    - name: Download Scrutinizer-CI
+      run: wget https://scrutinizer-ci.com/ocular.phar
+      
+    - name: Run Code Coverage
+      run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
+
+  PHP-7.1:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    
+    - name: Setup PHP environment
+      uses: nanasess/setup-php@v3.0.6
+      with:
+        php-version: 7.1
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Update Composer
+      run: composer self-update
+      
+    - name: Install Composer packages
+      run: composer install --no-interaction --prefer-source --dev
+      
+    - name: Rehash PHPENV
+      run: phpenv rehash
+    
+    - name: Run PHPUnit
+      run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
+      
+    - name: Download Scrutinizer-CI
+      run: wget https://scrutinizer-ci.com/ocular.phar
+      
+    - name: Run Code Coverage
+      run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
+
+  PHP-7.2:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    
+    - name: Setup PHP environment
+      uses: nanasess/setup-php@v3.0.6
+      with:
+        php-version: 7.2
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Update Composer
+      run: composer self-update
+      
+    - name: Install Composer packages
+      run: composer install --no-interaction --prefer-source --dev
+      
+    - name: Rehash PHPENV
+      run: phpenv rehash
+    
+    - name: Run PHPUnit
+      run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
+      
+    - name: Download Scrutinizer-CI
+      run: wget https://scrutinizer-ci.com/ocular.phar
+      
+    - name: Run Code Coverage
+      run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
+
+  PHP-7.3:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    
+    - name: Setup PHP environment
+      uses: nanasess/setup-php@v3.0.6
+      with:
+        php-version: 7.3
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Update Composer
+      run: composer self-update
+      
+    - name: Install Composer packages
+      run: composer install --no-interaction --prefer-source --dev
+      
+    - name: Rehash PHPENV
+      run: phpenv rehash
+    
+    - name: Run PHPUnit
+      run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
+      
+    - name: Download Scrutinizer-CI
+      run: wget https://scrutinizer-ci.com/ocular.phar
+      
+    - name: Run Code Coverage
+      run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
+
+  PHP-7.4:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    
+    - name: Setup PHP environment
+      uses: nanasess/setup-php@v3.0.6
+      with:
+        php-version: 7.4
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Update Composer
+      run: composer self-update
+      
+    - name: Install Composer packages
+      run: composer install --no-interaction --prefer-source --dev
+      
+    - name: Rehash PHPENV
+      run: phpenv rehash
+    
+    - name: Run PHPUnit
+      run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
+      
+    - name: Download Scrutinizer-CI
+      run: wget https://scrutinizer-ci.com/ocular.phar
+      
+    - name: Run Code Coverage
+      run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
+
+  PHP-8.0:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    
+    - name: Setup PHP environment
+      uses: nanasess/setup-php@v3.0.6
+      with:
+        php-version: 8.0
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
