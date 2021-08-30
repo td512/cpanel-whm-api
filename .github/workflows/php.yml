@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  PHP-7.0:
+  PHP-70:
 
     runs-on: ubuntu-latest
 
@@ -50,7 +50,7 @@ jobs:
     - name: Run Code Coverage
       run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
 
-  PHP-7.1:
+  PHP-71:
 
     runs-on: ubuntu-latest
 
@@ -93,7 +93,7 @@ jobs:
     - name: Run Code Coverage
       run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
 
-  PHP-7.2:
+  PHP-72:
 
     runs-on: ubuntu-latest
 
@@ -136,7 +136,7 @@ jobs:
     - name: Run Code Coverage
       run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
 
-  PHP-7.3:
+  PHP-73:
 
     runs-on: ubuntu-latest
 
@@ -179,7 +179,7 @@ jobs:
     - name: Run Code Coverage
       run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
 
-  PHP-7.4:
+  PHP-74:
 
     runs-on: ubuntu-latest
 
@@ -222,7 +222,7 @@ jobs:
     - name: Run Code Coverage
       run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
 
-  PHP-8.0:
+  PHP-80:
 
     runs-on: ubuntu-latest
 
