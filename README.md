@@ -1,7 +1,6 @@
 ## cPanel/WHM API PHP
-Manage your WHM/cPanel server with this PHP library. Simple to use. With this PHP library, you can manage your cPanel/WHM server.
+With this PHP library, you can manage your cPanel/WHM server.
 
-[![License](https://img.shields.io/packagist/l/td512/cpanel-whm-api.svg)](https://github.com/td512/cpanel-whm-api/blob/master/LICENSE)
 [![Build Status](https://github.com/td512/cpanel-whm-api/actions/workflows/php.yml/badge.svg)](https://github.com/td512/cpanel-whm-api/actions/workflows/php.yml)
 [![Code Coverage](https://scrutinizer-ci.com/g/td512/cpanel-whm-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/td512/cpanel-whm-api/?branch=master)
 [![Code Quality](https://scrutinizer-ci.com/g/td512/cpanel-whm-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/td512/cpanel-whm-api/?branch=master)
