@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PreviewTechs\\cPanelWHM\\": "src"
+            "TD512\\cPanelWHM\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PreviewTechs\\cPanelWHM\\Tests\\": "tests"
+            "TD512\\cPanelWHM\\Tests\\": "tests"
         }
     },
     "require-dev": {

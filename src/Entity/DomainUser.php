@@ -1,6 +1,6 @@
 <?php
 
-namespace PreviewTechs\cPanelWHM\Entity;
+namespace TD512\cPanelWHM\Entity;
 
 class DomainUser
 {
