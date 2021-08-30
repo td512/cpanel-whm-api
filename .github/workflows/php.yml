@@ -34,9 +34,6 @@ jobs:
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
-      
-    - name: Rehash PHPENV
-      run: phpenv rehash
     
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
@@ -74,9 +71,6 @@ jobs:
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
-      
-    - name: Rehash PHPENV
-      run: phpenv rehash
     
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
@@ -114,9 +108,6 @@ jobs:
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
-      
-    - name: Rehash PHPENV
-      run: phpenv rehash
     
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
@@ -154,9 +145,6 @@ jobs:
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
-      
-    - name: Rehash PHPENV
-      run: phpenv rehash
     
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
@@ -194,9 +182,6 @@ jobs:
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
-      
-    - name: Rehash PHPENV
-      run: phpenv rehash
     
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
@@ -234,9 +219,6 @@ jobs:
       
     - name: Install Composer packages
       run: composer install --no-interaction --prefer-source --dev
-      
-    - name: Rehash PHPENV
-      run: phpenv rehash
     
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
