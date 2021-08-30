@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.2",
         "ext-curl": "*",
         "guzzlehttp/psr7": "^1.4",
         "php-http/client-implementation": "^1.0",
