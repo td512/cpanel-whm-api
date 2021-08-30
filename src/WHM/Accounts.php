@@ -1,20 +1,20 @@
 <?php
 
-namespace TD512\cPanelWHM\WHM;
+namespace Chase\cPanelWHM\WHM;
 
 use DateTime;
 use Http\Client\Exception;
-use TD512\cPanelWHM\Entity\Account;
-use TD512\cPanelWHM\Entity\Domain;
-use TD512\cPanelWHM\Entity\DomainUser;
-use TD512\cPanelWHM\Entity\SuspendedAccount;
-use TD512\cPanelWHM\Exceptions\ClientExceptions;
-use TD512\cPanelWHM\WHMClient;
+use Chase\cPanelWHM\Entity\Account;
+use Chase\cPanelWHM\Entity\Domain;
+use Chase\cPanelWHM\Entity\DomainUser;
+use Chase\cPanelWHM\Entity\SuspendedAccount;
+use Chase\cPanelWHM\Exceptions\ClientExceptions;
+use Chase\cPanelWHM\WHMClient;
 
 /**
  * Class Accounts
  *
- * @package TD512\cPanelWHM\WHM
+ * @package Chase\cPanelWHM\WHM
  */
 class Accounts
 {
@@ -53,7 +53,7 @@ class Accounts
      *       $accounts->searchAccounts($keyword, $searchType, $options);
      *   } catch (\Http\Client\Exception $e) {
      *       echo $e->getMessage();
-     *   } catch (\TD512\cPanelWHM\Exceptions\ClientExceptions $e) {
+     *   } catch (\Chase\cPanelWHM\Exceptions\ClientExceptions $e) {
      *       echo $e->getMessage();
      *   }
      *

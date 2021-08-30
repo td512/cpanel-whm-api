@@ -20,8 +20,8 @@ composer require td512/cpanel-whm-api:dev-master
 require "vendor/autoload.php";
 
 //Build WHM Client
-use TD512\cPanelWHM\WHM\Accounts;
-use TD512\cPanelWHM\WHMClient;
+use Chase\cPanelWHM\WHM\Accounts;
+use Chase\cPanelWHM\WHMClient;
 
 require "vendor/autoload.php";
 $whmClient = new WHMClient("WHM_USERNAME","API_TOKEN", "yourwhmserver.com", 2087);
@@ -45,7 +45,7 @@ Create API token from https://your-whm-server:2087/cpsessxxxxxx/scripts7/apitoke
 Learn more about WHM API Token from [https://documentation.cpanel.net/display/64Docs/Manage+API+Tokens](https://documentation.cpanel.net/display/64Docs/Manage+API+Tokens)
 ```php
 <?php
-use TD512\cPanelWHM\WHMClient;
+use Chase\cPanelWHM\WHMClient;
 $whmClient = new WHMClient("WHM_USERNAME","API_TOKEN", "yourwhmserver.com", 2087);
 ```
 

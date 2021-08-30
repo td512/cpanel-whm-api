@@ -1,6 +1,6 @@
 <?php
 
-namespace TD512\cPanelWHM\Exceptions;
+namespace Chase\cPanelWHM\Exceptions;
 
 class ClientExceptions extends \Exception
 {

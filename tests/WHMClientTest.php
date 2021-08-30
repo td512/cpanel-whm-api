@@ -1,6 +1,6 @@
 <?php
 
-namespace TD512\cPanelWHM\Tests;
+namespace Chase\cPanelWHM\Tests;
 
 
 use GuzzleHttp\Psr7\Request;
@@ -8,8 +8,8 @@ use GuzzleHttp\Psr7\Response;
 use Http\Client\HttpClient;
 use Http\Mock\Client;
 use PHPUnit\Framework\TestCase;
-use TD512\cPanelWHM\Exceptions\ClientExceptions;
-use TD512\cPanelWHM\WHMClient;
+use Chase\cPanelWHM\Exceptions\ClientExceptions;
+use Chase\cPanelWHM\WHMClient;
 
 class WHMClientTest extends TestCase
 {
@@ -27,9 +27,9 @@ class WHMClientTest extends TestCase
 
     /**
      * @throws \Http\Client\Exception
-     * @throws \TD512\cPanelWHM\Exceptions\ClientExceptions
+     * @throws \Chase\cPanelWHM\Exceptions\ClientExceptions
      *
-     * @expectedException \TD512\cPanelWHM\Exceptions\ClientExceptions
+     * @expectedException \Chase\cPanelWHM\Exceptions\ClientExceptions
      */
     public function testSendRequestWithBadCredsAndThrowException()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace TD512\cPanelWHM\Entity;
+namespace Chase\cPanelWHM\Entity;
 
 class Account
 {

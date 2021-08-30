@@ -1,11 +1,11 @@
 <?php
 
-namespace TD512\cPanelWHM;
+namespace Chase\cPanelWHM;
 
 use GuzzleHttp\Psr7\Request;
 use Http\Adapter\Guzzle6\Client;
 use Http\Client\HttpClient;
-use TD512\cPanelWHM\Exceptions\ClientExceptions;
+use Chase\cPanelWHM\Exceptions\ClientExceptions;
 
 class WHMClient
 {
