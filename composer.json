@@ -7,6 +7,10 @@
         {
             "name": "Shaharia Azam",
             "email": "shaharia.azam@gmail.com"
+        },
+        {
+            "name": "Theo Morra",
+            "email": "theo@theom.nz"
         }
     ],
     "require": {
@@ -14,7 +18,7 @@
         "ext-curl": "*",
         "guzzlehttp/psr7": "^1.4",
         "php-http/client-implementation": "^1.0",
-        "php-http/guzzle6-adapter": ">=1.1"
+        "td512/guzzle6-adapter": ">=1.1"
     },
     "autoload": {
         "psr-4": {
